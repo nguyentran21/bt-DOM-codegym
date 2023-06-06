@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="">
+      <h1>Caculator</h1>
+      <input type="number" id="number1" />
+      <input type="number" id="number2" />
+      <div style="margin-top: 20px">
+        <button onclick="cong()" type="button">Cộng (+)</button>
+        <button onclick="tru()" type="button">Trừ (-)</button>
+        <button onclick="nhan()" type="button">Nhân(X)</button>
+        <button onclick="chia()" type="button">Chia(/)</button>
+        <button type="submit">reset</button>
+        <p>Kết quả: <span id="kq"></span></p>
+      </div>
+    </form>
+
+    <script>
+      function cong() {
+        let a = +document.getElementById("number1").value;
+        let b = +document.getElementById("number2").value;
+        let cong = a + b;
+        document.getElementById("kq").innerHTML = cong;
+      }
+      function tru() {
+        let a = +document.getElementById("number1").value;
+        let b = +document.getElementById("number2").value;
+        let tru = a - b;
+        document.getElementById("kq").innerHTML = tru;
+      }
+      function nhan() {
+        let a = +document.getElementById("number1").value;
+        let b = +document.getElementById("number2").value;
+        let nhan = a * b;
+        document.getElementById("kq").innerHTML = nhan;
+      }
+      function chia() {
+        let a = +document.getElementById("number1").value;
+        let b = +document.getElementById("number2").value;
+        let chia = a / b;
+        document.getElementById("kq").innerHTML = chia;
+      }
+    </script>
+  </body>
+</html>

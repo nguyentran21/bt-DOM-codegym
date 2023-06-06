@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: rgb(101, 87, 70);
+      }
+    </style>
+  </head>
+  <body>
+    <form action="">
+      <h1>Caculator</h1>
+      <input type="text" id="number1" />
+      <input type="number" id="number2" />
+      <div style="margin-top: 20px">
+        <button onclick="calculate('+')" type="button">Cộng (+)</button>
+        <button onclick="calculate('-')" type="button">Trừ (-)</button>
+        <button onclick="calculate('X')" type="button">Nhân(X)</button>
+        <button onclick="calculate('/')" type="button">Chia(/)</button>
+        <button type="submit">reset</button>
+        <p>Kết quả: <span id="kq"></span></p>
+      </div>
+    </form>
+    <script>
+      function calculate(kt) {
+        let a = +document.getElementById("number1").value;
+        let b = +document.getElementById("number2").value;
+        let result;
+        switch (kt) {
+          case "+":
+            result = a + b;
+            break;
+          case "-":
+            result = a - b;
+            break;
+          case "X":
+            result = a * b;
+            break;
+          case "/":
+            result = a / b;
+            break;
+        }
+        document.getElementById("kq").innerHTML = result;
+      }
+    </script>
+  </body>
+</html>
